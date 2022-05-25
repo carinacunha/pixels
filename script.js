@@ -8,7 +8,7 @@ function backgroundColor(color1, color2, color3, color4) {
   backgroundColor[3].style.backgroundColor = color4;
 }
 
-color1 = 'rgb(111, 105, 172)';
+color1 = 'black';
 color2 = 'rgb(149, 218, 193)';
 color3 = 'rgb(255, 235, 161)';
 color4 = 'rgb(253, 111, 150)';
