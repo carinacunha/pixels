@@ -19,13 +19,13 @@ let divContainer = document.getElementById('pixel-board');
 let numberLines = 5;
 let numberColumns = 5;
 
-for (i = 1; i <= numberLines; i += 1) {
+for (let i = 1; i <= numberLines; i += 1) {
 
   let divLine = document.createElement('div');
   divLine.className = 'line';
   divContainer.appendChild(divLine);
 
-  for (j = 1; j <= numberColumns; j += 1) {
+  for (let j = 1; j <= numberColumns; j += 1) {
     let divPixel = document.createElement('div');
     divPixel.className = 'pixel';
     divLine.appendChild(divPixel);
@@ -41,7 +41,7 @@ colorStart.className += ' selected';
 
 let palette = document.getElementById('color-palette');
 
-palette.addEventListener('click', function(event) {
+palette.addEventListener('click', function (event) {
   let selectedClass = document.getElementsByClassName('color selected')[0];
   selectedClass.className = 'color';
   event.target.className += ' selected';
@@ -51,20 +51,20 @@ palette.addEventListener('click', function(event) {
 
 let pixels = document.getElementById('pixel-board');
 
-pixels.addEventListener('click', function(event) {
+pixels.addEventListener('click', function (event) {
   let selectedColor = document.getElementsByClassName('color selected')[0];
   event.target.style.background = selectedColor.style.backgroundColor;
 })
 
 // Requisito 9
 
-// let buttonClear = document.getElementById('clear-board');
-// let pixels = document.getElementById('pixel-board');
+let buttonClear = document.getElementById('clear-board');
+let setPixels = document.getElementsByClassName('pixel');
 
-// function clearColor() {
-//   pixels.style.backgroundColor = 'white';
-// }
+function clearColor() {
+  for(let e of setPixels) {
+    e.style.backgroundColor = 'white';
+  }
+}
 
-// buttonClear.addEventListener('click', clearColor);
-
-// clearColor();
+buttonClear.addEventListener('click', clearColor);
