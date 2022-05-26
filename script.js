@@ -69,3 +69,35 @@ function clearColor() {
 }
 
 buttonClear.addEventListener('click', clearColor);
+
+// Requisito 10
+
+// const divContainer = document.getElementById('pixel-board');
+const generateSquare = document.getElementById('generate-board');
+
+function generate() {
+  while (divContainer.firstChild) {
+    divContainer.removeChild(divContainer.firstChild);
+  }
+
+  let number = parseInt(document.getElementById('board-size').value);
+
+  if(document.querySelector('#board-size').value.length == 0){
+    window.alert('Board inválido!'); 
+  }
+  if(number >= 5 && number <= 50){
+    for (let i = 1; i <= number; i += 1) {
+      const divLine = document.createElement('div');
+      divLine.className = 'line';
+      divContainer.appendChild(divLine);
+  
+    for (let j = 1; j <= number; j += 1) {
+      const divPixel = document.createElement('div');
+      divPixel.className = 'pixel';
+      divLine.appendChild(divPixel);
+    }
+  }
+  }
+}
+
+generateSquare.addEventListener('click', generate);

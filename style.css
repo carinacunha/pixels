@@ -4,10 +4,9 @@
 }
 
 body{
-    width: 50%;
+    width: 100%;
     margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30px;
 }
 
 .color{
@@ -24,6 +23,8 @@ body{
 
 #pixel-board{
     margin-top: 40px;
+    margin-left: 30px
+    
     
 }
 .pixel{
@@ -40,14 +41,25 @@ body{
     
 }
 
-button{
-    margin-top: 10px;
+button, #generate-board{
+    margin-top: 20px;
     width: 90px;
     height: 30px;
     font-size: 18px;
     border-radius: 5px;
     border: none;
     background-color: rgb(253, 239, 244);
-    margin-left: 20px;
+    margin-left: 110px;
+}
 
+#board-size{
+    margin-top: 30px;
+    font-size: 18px;
+    width: 70px;
+    margin-left: auto;
+
+}
+
+#h3-inputs{
+    margin-bottom: 20px;
 }
