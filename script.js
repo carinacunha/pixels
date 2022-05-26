@@ -1,3 +1,4 @@
+// Requisito 1, 2, e 3
 function backgroundColor(color1, color2, color3, color4) {
   let backgroundColor = document.getElementsByClassName('color');
   backgroundColor[0].style.backgroundColor = color1;
@@ -36,3 +37,33 @@ for (i = 1; i <= numberLines; i += 1) {
 let colorStart = document.getElementsByClassName('color')[0];
 colorStart.className += ' selected';
 
+// Requisito 7
+
+let palette = document.getElementById('color-palette');
+
+palette.addEventListener('click', function(event) {
+  let selectedClass = document.getElementsByClassName('color selected')[0];
+  selectedClass.className = 'color';
+  event.target.className += ' selected';
+});
+
+// //Requisto 8
+
+// let palette = document.getElementById('color-palette');
+
+// palette.addEventListener('click', function(event){
+//   event.target.style.background = document.getElementsByClassName('color selected').backgroundColor;
+// })
+
+// Requisito 9
+
+// let buttonClear = document.getElementById('clear-board');
+// let pixels = document.getElementById('pixel-board');
+
+// function clearColor() {
+//   pixels.style.backgroundColor = 'white';
+// }
+
+// buttonClear.addEventListener('click', clearColor);
+
+// clearColor();
