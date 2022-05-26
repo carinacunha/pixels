@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 // Requisito 1, 2, e 3
 function background(color1, color2, color3, color4) {
   const backgroundColor = document.getElementsByClassName('color');
@@ -70,37 +71,41 @@ function clearColor() {
 
 buttonClear.addEventListener('click', clearColor);
 
-// Requisito 10
+// Requisito 10 e 11
 const generateSquare = document.getElementById('generate-board');
 
+// eslint-disable-next-line complexity
 function generate() {
   while (divContainer.firstChild) {
     divContainer.removeChild(divContainer.firstChild);
   }
 
-  let number = parseInt(document.getElementById('board-size').value);
+  const number = parseInt(document.getElementById('board-size').value);
+  let numberFinal = number;
 
-  if(document.querySelector('#board-size').value.length == 0){
-    window.alert('Board inválido!'); 
+  if (document.querySelector('#board-size').value.length == 0) {
+    window.alert('Board inválido!');
   }
-  if(number >= 5 && number <= 50) {
-    for (let i = 1; i <= number; i += 1) {
-      const divLine = document.createElement('div');
-      divLine.className = 'line';
-      divContainer.appendChild(divLine);
-  
-    for (let j = 1; j <= number; j += 1) {
+  if (number < 5) {
+    numberFinal = 5;
+  } else if (number > 50) {
+    numberFinal = 50;
+  }
+
+  for (let i = 1; i <= numberFinal; i += 1) {
+    const divLine = document.createElement('div');
+    divLine.className = 'line';
+    divContainer.appendChild(divLine);
+
+    for (let j = 1; j <= numberFinal; j += 1) {
       const divPixel = document.createElement('div');
       divPixel.className = 'pixel';
       divLine.appendChild(divPixel);
     }
   }
-  }
-};
+}
 
 generateSquare.addEventListener('click', generate);
-
-// Requisito 11
 
 // Requisito 12
 // eslint-disable-next-line func-names
@@ -113,4 +118,3 @@ for (let i = 1; i < backgroundRandom.length; i += 1) {
   const rgb = `rgb(${r},${g},${b})`;
   backgroundRandom[i].style.backgroundColor = rgb;
 }
-
