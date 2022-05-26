@@ -47,13 +47,14 @@ palette.addEventListener('click', function(event) {
   event.target.className += ' selected';
 });
 
-// //Requisto 8
+// Requisto 8
 
-// let palette = document.getElementById('color-palette');
+let pixels = document.getElementById('pixel-board');
 
-// palette.addEventListener('click', function(event){
-//   event.target.style.background = document.getElementsByClassName('color selected').backgroundColor;
-// })
+pixels.addEventListener('click', function(event) {
+  let selectedColor = document.getElementsByClassName('color selected')[0];
+  event.target.style.background = selectedColor.style.backgroundColor;
+})
 
 // Requisito 9
 
