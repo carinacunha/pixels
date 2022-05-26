@@ -71,8 +71,6 @@ function clearColor() {
 buttonClear.addEventListener('click', clearColor);
 
 // Requisito 10
-
-// const divContainer = document.getElementById('pixel-board');
 const generateSquare = document.getElementById('generate-board');
 
 function generate() {
@@ -85,7 +83,7 @@ function generate() {
   if(document.querySelector('#board-size').value.length == 0){
     window.alert('Board inválido!'); 
   }
-  if(number >= 5 && number <= 50){
+  if(number >= 5 && number <= 50) {
     for (let i = 1; i <= number; i += 1) {
       const divLine = document.createElement('div');
       divLine.className = 'line';
@@ -98,6 +96,21 @@ function generate() {
     }
   }
   }
-}
+};
 
 generateSquare.addEventListener('click', generate);
+
+// Requisito 11
+
+// Requisito 12
+// eslint-disable-next-line func-names
+
+const backgroundRandom = document.getElementsByClassName('color');
+for (let i = 1; i < backgroundRandom.length; i += 1) {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  const rgb = `rgb(${r},${g},${b})`;
+  backgroundRandom[i].style.backgroundColor = rgb;
+}
+
