@@ -83,7 +83,7 @@ function generate() {
   const number = parseInt(document.getElementById('board-size').value);
   let numberFinal = number;
 
-  if (document.querySelector('#board-size').value.length == 0) {
+  if (document.querySelector('#board-size').value.length === 0) {
     window.alert('Board inválido!');
   }
   if (number < 5) {
@@ -112,9 +112,9 @@ generateSquare.addEventListener('click', generate);
 
 const backgroundRandom = document.getElementsByClassName('color');
 for (let i = 1; i < backgroundRandom.length; i += 1) {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
   const rgb = `rgb(${r},${g},${b})`;
   backgroundRandom[i].style.backgroundColor = rgb;
 }

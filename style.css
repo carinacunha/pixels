@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    width: 100%;
-    margin-top: 60px;
-    margin-left: 30px;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 40px;
+    margin-left: 90px;
+    background-image: url("image.jpg");
+    background-size: auto;
+    color: rgb(91, 91, 91);
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+h1{
+    text-align: justify;
 }
 
 .color{
@@ -15,25 +28,27 @@ body{
     width: 70px;
     height: 70px;
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
 
+h3{
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 22px;
 }
 
 #pixel-board{
     margin-top: 40px;
-    margin-left: 30px
-    
-    
+    margin-left: 20px;  
 }
 .pixel{
     display: inline-block;
     border: 1px solid black; 
     width: 40px;
     height: 40px;
-    background-color: white;
-    
+    background-color: white;  
 }
 
 .line{
@@ -41,25 +56,40 @@ body{
     
 }
 
-button, #generate-board{
+button{
     margin-top: 20px;
     width: 90px;
     height: 30px;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
-    background-color: rgb(253, 239, 244);
+    background-color: rgb(91, 91, 91);
     margin-left: 110px;
+    color: rgb(248, 245, 241);
+    transition-duration: 0.4s;
 }
 
+button:hover{
+    background-color: rgb(199, 190, 162);
+}
+
+
 #board-size{
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 18px;
-    width: 70px;
+    width: 90px;
+    height: 30px;
     margin-left: auto;
+    border-radius: 10px;
+    border: none;
 
 }
 
 #h3-inputs{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+}
+
+#pixel-board{
+    margin-left: 45px;
 }
