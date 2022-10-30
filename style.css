@@ -18,19 +18,21 @@ body{
 
 #general{
     background-image: linear-gradient(90deg, rgba(15, 31, 27, 0.567), rgba(250, 248, 217, 0));
-    width: 80%;
-    height: 250%;
-    padding: 30px;
+    width: 60%;
+    height: 100%;
+    padding: 20px;
     border-radius: 15px;
-    text-align: justify;
+    text-align: center;
+    
 }
 
 h1{
-    text-align: justify;
+    text-align: center;
     color: black;
     text-align: center;
     width: 250px;
     color: rgb(194, 198, 197);
+    margin-left: 450px ;
 }
 
 .color{
@@ -40,7 +42,7 @@ h1{
     height: 70px;
     position: relative;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     border-radius: 10px;
 }
 
@@ -48,6 +50,7 @@ h3{
     text-align: justify;
     margin-bottom: 20px;
     font-size: 22px;
+    margin-left: 480px;
 }
 
 #pixel-board{
@@ -59,7 +62,7 @@ h3{
     border: 1px solid black; 
     width: 40px;
     height: 40px;
-    background-color: white;  
+    background-color: rgb(194, 198, 197);  
 }
 
 .line{
@@ -68,31 +71,34 @@ h3{
 
 button{
     margin-top: 20px;
-    width: 90px;
+    width: 115px;
     height: 30px;
     font-size: 18px;
     border-radius: 10px;
     border: none;
-    background-color: rgb(91, 91, 91);
+    background-color: rgb(35, 43, 41);
     margin-left: 110px;
     color: rgb(194, 198, 197);
     transition-duration: 0.4s;
 }
 
 button:hover{
-    background-color: rgb(199, 190, 162);
+    background-color: rgb(194, 198, 197);
 }
 
 
 #board-size{
     margin-top: 20px;
     font-size: 18px;
-    width: 90px;
+    width: 115px;
     height: 30px;
     margin-left: auto;
     border-radius: 10px;
     border: none;
-    background-color: rgb(194, 198, 197);
+    background-color: rgb(35, 43, 41);
+    font-size: 18px;
+    text-align: center;
+    color: rgb(194, 198, 197);
 
 }
 
@@ -100,7 +106,6 @@ button:hover{
     margin-bottom: 10px;
 
 }
-
-#pixel-board{
-    margin-left: 45px;
-}
+ #clear-board{
+     margin-left: 0px
+ }
